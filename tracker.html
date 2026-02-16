@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Expense Tracker</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <h2>Expense Dashboard</h2>
+
+  <section class="summary">
+    <p>Total Budget: ₦<span id="total-budget">0</span></p>
+    <p>Total Spent: ₦<span id="total-spent">0</span></p>
+    <p>Remaining: ₦<span id="remaining">0</span></p>
+  </section>
+
+  <form id="expense-form">
+    <input type="text" id="title" placeholder="Expense title" required>
+    <input type="number" id="amount" placeholder="Amount" required>
+    <select id="category">
+      <option value="Food">Food</option>
+      <option value="Transport">Transport</option>
+      <option value="Shopping">Shopping</option>
+    </select>
+    <button type="submit">Add Expense</button>
+  </form>
+
+  <input type="text" id="filter" placeholder="Filter by category">
+
+  <ul id="expense-list"></ul>
+
+  <section>
+    <h3>Compare Price</h3>
+    <input type="text" id="product-name" placeholder="Enter product name">
+    <button id="check-price">Check Price</button>
+    <p id="price-result"></p>
+  </section>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
