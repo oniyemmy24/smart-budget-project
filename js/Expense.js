@@ -1,9 +1,11 @@
 export default class Expense {
-  constructor(title, amount, category) {
+  constructor(title, amount, category, date, note) {
     this.id = Date.now();
     this.title = title;
     this.amount = parseFloat(amount);
     this.category = category;
-    this.date = new Date().toLocaleDateString();
+    this.date = date;
+    this.note = note;
   }
 }
+

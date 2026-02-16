@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<header>
+  <h2>Financial Dashboard</h2>
+  <button id="logout-btn">Logout</button>
+</header>
+
+<section class="summary">
+  <p>Total Income: ₦<span id="total-income">0</span></p>
+  <p>Total Expenses: ₦<span id="total-expense">0</span></p>
+  <p>Remaining: ₦<span id="remaining">0</span></p>
+</section>
+
+<section>
+  <h3>Add Income</h3>
+  <form id="income-form">
+    <input type="text" id="income-source" placeholder="Source">
+    <input type="number" id="income-amount">
+    <button>Add</button>
+  </form>
+</section>
+
+<section>
+  <h3>Add Expense</h3>
+  <form id="expense-form">
+    <input type="text" id="expense-title">
+    <input type="number" id="expense-amount">
+    <input type="date" id="expense-date">
+    <input type="text" id="expense-note">
+    <select id="expense-category"></select>
+    <button>Add</button>
+  </form>
+</section>
+
+<section>
+  <h3>Create Budget Per Category</h3>
+  <form id="budget-form">
+    <select id="budget-category"></select>
+    <input type="number" id="budget-amount">
+    <button>Set Budget</button>
+  </form>
+</section>
+
+<section>
+  <h3>Manage Categories</h3>
+  <input type="text" id="new-category">
+  <button id="add-category">Add Category</button>
+</section>
+
+<section>
+  <h3>Price Comparison</h3>
+  <input type="text" id="product-search">
+  <button id="search-price">Search</button>
+  <p id="price-result"></p>
+</section>
+
+<section>
+  <h3>Spending Chart</h3>
+  <canvas id="expenseChart"></canvas>
+</section>
+
+<script type="module" src="js/main.js"></script>
+</body>
+</html>

@@ -1,12 +1,11 @@
 export default class PriceAPI {
-  static async fetchPrice(product) {
+  static async search(product) {
     try {
-      const response = await fetch(`https://dummyjson.com/products/search?q=${product}`);
-      const data = await response.json();
-      return data.products[0]?.price || "Not found";
-    } catch (error) {
-      console.error("API Error:", error);
-      return "Error fetching price";
+      const res = await fetch(`https://dummyjson.com/products/search?q=${product}`);
+      const data = await res.json();
+      return data.products.slice(0,3);
+    } catch (err) {
+      return [];
     }
   }
 }
