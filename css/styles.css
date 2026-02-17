@@ -47,23 +47,3 @@ li {
   justify-content: space-between;
 }
 
-.auth-page {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-.auth-container {
-  background: white;
-  padding: 30px;
-  width: 300px;
-  border-radius: 8px;
-}
-
-input, select, button {
-  display: block;
-  margin: 8px 0;
-  padding: 8px;
-  width: 100%;
-}

@@ -1,23 +1,22 @@
 export default class Budget {
-  constructor() {
-    this.income = [];
+  constructor(amount = 0) {
+    this.amount = amount;
     this.expenses = [];
-    this.categoryBudgets = {};
-    this.categories = ["Food", "Transport", "Rent", "Medical", "Subscriptions"];
   }
 
-  addIncome(income) { this.income.push(income); }
-  addExpense(expense) { this.expenses.push(expense); }
-
-  getTotalIncome() {
-    return this.income.reduce((t, i) => t + i.amount, 0);
+  addExpense(expense) {
+    this.expenses.push(expense);
   }
 
-  getTotalExpense() {
-    return this.expenses.reduce((t, e) => t + e.amount, 0);
+  deleteExpense(id) {
+    this.expenses = this.expenses.filter(e => e.id !== id);
+  }
+
+  getTotalSpent() {
+    return this.expenses.reduce((total, e) => total + e.amount, 0);
   }
 
   getRemaining() {
-    return this.getTotalIncome() - this.getTotalExpense();
+    return this.amount - this.getTotalSpent();
   }
 }

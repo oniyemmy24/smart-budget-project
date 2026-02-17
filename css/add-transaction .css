@@ -1,0 +1,60 @@
+body {
+    background: #f4f6f9;
+    font-family: Arial, sans-serif;
+}
+
+.type-switch {
+    display: flex;
+    background: #e9ecef;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.type-switch button {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    background: transparent;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.type-switch button.active {
+    background: #6BCB2C;
+    color: white;
+}
+
+.amount-input {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.category-item {
+    background: white;
+    border-radius: 15px;
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.category-item:hover {
+    transform: scale(1.05);
+}
+
+.category-item.active {
+    border-color: #6BCB2C;
+    background: #eaffea;
+}
+
+.save-btn {
+    padding: 12px;
+    border-radius: 12px;
+}
